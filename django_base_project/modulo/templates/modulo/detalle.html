@@ -1,0 +1,12 @@
+"""
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ comida.titulo }}</h2>
+<img src="{{ comida.imagen.url }}" width="300">
+<p>{{ comida.descripcion }}</p>
+<p><b>Ingredientes:</b> {{ comida.ingredientes }}</p>
+<p><b>Dificultad:</b> {{ comida.nivel_dificultad }}</p>
+<a href="/editar/{{ comida.id }}/">Editar</a>
+<a href="/eliminar/{{ comida.id }}/">Eliminar</a>
+{% endblock %}
+"""

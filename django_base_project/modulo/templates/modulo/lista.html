@@ -1,0 +1,22 @@
+"""
+{% extends 'base.html' %}
+{% block content %}
+<a href="/crear/" class="btn btn-primary">Nueva comida</a>
+<div class="row mt-3">
+{% for comida in comidas %}
+<div class="col-md-4">
+<div class="card">
+{% if comida.imagen %}
+<img src="{{ comida.imagen.url }}" class="card-img-top">
+{% endif %}
+<div class="card-body">
+<h5>{{ comida.titulo }}</h5>
+<p>{{ comida.pais }}</p>
+<a href="/detalle/{{ comida.id }}/" class="btn btn-info">Ver</a>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
+"""
